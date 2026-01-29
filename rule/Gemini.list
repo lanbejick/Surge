@@ -24,9 +24,7 @@ DOMAIN-SUFFIX,deepmind.com,
 DOMAIN-SUFFIX,deepmind.google, 
 
 # === [System] 核心通信与身份验证 (解决对话卡顿) ===
-DOMAIN,mtalk.google.com, 
 DOMAIN,signaler-pa.clients6.google.com, 
-DOMAIN,clients4.google.com, 
 DOMAIN,ia-not-found.google.com, 
 DOMAIN,myactivity.google.com, 
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com, 
