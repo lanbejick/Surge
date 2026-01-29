@@ -1,0 +1,33 @@
+# === [Gemini] 网页与移动端 App ===
+DOMAIN-SUFFIX,gemini.google.com, 
+DOMAIN-SUFFIX,bard.google.com, 
+DOMAIN,aida.googleapis.com, 
+DOMAIN,alkalicontent-pa.googleapis.com, 
+
+# === [Gemini] API & AI Studio (开发环境) ===
+DOMAIN,makersuite.google.com, 
+DOMAIN,ai.google.dev, 
+DOMAIN,alkalimakersuite-pa.clients6.google.com, 
+DOMAIN-SUFFIX,generativeai.google, 
+DOMAIN-KEYWORD,generativelanguage, 
+
+# === [Android Studio] 侧边栏 AI 助手 ===
+DOMAIN,cloudaicontent-pa.googleapis.com, 
+DOMAIN,cloudaicompanion.googleapis.com, 
+DOMAIN-KEYWORD,developerprofiles, 
+
+# === [Colab & DeepMind] 实验与研究 ===
+DOMAIN-KEYWORD,colab, 
+# 注意：googleusercontent 包含很多 Google 资源，建议优先匹配上面精准的域名
+DOMAIN-SUFFIX,googleusercontent.com, 
+DOMAIN-SUFFIX,deepmind.com, 
+DOMAIN-SUFFIX,deepmind.google, 
+
+# === [System] 核心通信与身份验证 (解决对话卡顿) ===
+DOMAIN,mtalk.google.com, 
+DOMAIN,signaler-pa.clients6.google.com, 
+DOMAIN,clients4.google.com, 
+DOMAIN,ia-not-found.google.com, 
+DOMAIN,myactivity.google.com, 
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com, 
+DOMAIN-SUFFIX,apis.google.com, 
