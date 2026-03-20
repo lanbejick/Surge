@@ -1,0 +1,79 @@
+### Gemini & Android Studio AI ###
+
+# === [Gemini] 网页与移动端 App ===
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN,aida.googleapis.com
+DOMAIN,alkalicontent-pa.googleapis.com
+DOMAIN,aistudio.google.com # 新版 AI Studio (原 MakerSuite)
+
+# === [Gemini] API & AI Studio (开发环境) ===
+DOMAIN,makersuite.google.com
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-KEYWORD,generativelanguage
+
+# === [Android Studio] 侧边栏 AI 助手 ===
+DOMAIN,cloudaicontent-pa.googleapis.com
+DOMAIN,cloudaicompanion.googleapis.com
+DOMAIN,ide-ai.googleapis.com # [补充] Android Studio AI 核心接口
+DOMAIN-KEYWORD,developerprofiles
+
+# === [Colab & DeepMind] 实验与研究 ===
+DOMAIN-KEYWORD,colab
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+# 注意：googleusercontent.com 包含大量谷歌图片和网盘资源，如果全走代理可能浪费流量，建议放在规则链中后部
+DOMAIN-SUFFIX,googleusercontent.com 
+
+# === [System] 核心通信与身份验证 (解决对话卡顿与历史记录加载) ===
+DOMAIN,signaler-pa.clients6.google.com
+DOMAIN,ia-not-found.google.com
+DOMAIN,myactivity.google.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+
+### OpenAI ###
+
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,static.cloudflareinsights.com
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-KEYWORD,openai
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-ASN,20473,no-resolve
+
+### Claude  ###
+
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
