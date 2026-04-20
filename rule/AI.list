@@ -1,41 +1,59 @@
-### === [Gemini & Google AI 核心分流规则] === ###
-
-# --- 1. [核心 API 与 AI Studio] (极其重要，API Key 调用必经之路) ---
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN,aistudio.google.com
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-DOMAIN,alkalimakersuite-pa.googleapis.com
-DOMAIN,makersuite.google.com
-DOMAIN,ai.google.dev
-DOMAIN-SUFFIX,generativeai.google
-
-# --- 2. [Gemini 网页端与 App] ---
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,gemini.usercontent.goog # 动态内容与 Artifacts 渲染
+# ==========================================================
+# 1. [Gemini 核心通讯网关] (决定对话是否能成功发送与实时回复)
+# ==========================================================
+DOMAIN,robinfrontend-pa.googleapis.com
+DOMAIN,www.googleapis.com
 DOMAIN,aida.googleapis.com
 DOMAIN,alkalicontent-pa.googleapis.com
+DOMAIN,content-push.googleapis.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
 
-# --- 3. [Android Studio 侧边栏 AI 助手] ---
+# ==========================================================
+# 2. [AI 生成引擎与 API] (Gemini API 调用、AI Studio、生成式语言模型)
+# ==========================================================
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN,aistudio.google.com
+DOMAIN,makersuite.google.com
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,alkalimakersuite-pa.googleapis.com
+
+# ==========================================================
+# 3. [多媒体与静态内容] (解决图片生成预览、上传分析、UI图标加载)
+# ==========================================================
+DOMAIN-SUFFIX,googleusercontent.com  # 包含 lh3 等所有图片存储
+DOMAIN-SUFFIX,gemini.usercontent.goog # Artifacts 代码渲染/动态预览
+DOMAIN-SUFFIX,gstatic.com            # 核心静态资源库
+DOMAIN-SUFFIX,google-analytics.com    # 某些界面逻辑依赖分析脚本
+
+# ==========================================================
+# 4. [IDE & 开发者工具] (Android Studio / VS Code Gemini 插件)
+# ==========================================================
 DOMAIN,cloudaicontent-pa.googleapis.com
 DOMAIN,cloudaicompanion.googleapis.com
 DOMAIN,ide-ai.googleapis.com
+DOMAIN,firebase-settings.crashlytics.com
 
-# --- 4. [系统通信、鉴权与防泄漏] (防止账号 IP 地区被 Google 标记) ---
-DOMAIN,accounts.google.com # 账号登录与验证（必须代理，否则秒送中）
+# ==========================================================
+# 5. [鉴权与账号安全] (防止因 IP 漂移导致的登录掉线或地区限制)
+# ==========================================================
+DOMAIN,accounts.google.com
+DOMAIN,oauth2.googleapis.com
 DOMAIN,myaccount.google.com
 DOMAIN,myactivity.google.com
-DOMAIN,signaler-pa.clients6.google.com
-DOMAIN,ia-not-found.google.com
-DOMAIN,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,apis.google.com
-
-# --- 5. [补充：底层鉴权与配置下发] (极其容易漏网导致 AS 登录失效) ---
-# Android Studio 刷新 AI 助手 Token 的核心接口
-DOMAIN,oauth2.googleapis.com
-# Android Studio 内部功能开关 (Feature Flags) 以及设备端 AI (Gemini Nano) 的配置下发
+DOMAIN,location.googleapis.com       # 定位检测，防范 Region Not Supported
 DOMAIN,firebaseremoteconfig.googleapis.com
 DOMAIN,cloudconfig.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+
+# ==========================================================
+# 6. [终极兜底方案] (防止未来域名变动，建议开启关键字匹配)
+# ==========================================================
+DOMAIN-KEYWORD,googleapis
+DOMAIN-KEYWORD,googleusercontent
+
 
 ### OpenAI ###
 
