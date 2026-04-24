@@ -49,12 +49,12 @@ DOMAIN,voicesearch-pa.googleapis.com
 DOMAIN,pa-assistant-be-pa.googleapis.com
 
 # ==========================================================
-# 6. [鉴权、订阅与账号安全] (解决掉线、高级版检测、地区限制)
+# 6. [鉴权、订阅与账号安全] (核心！解决掉线、订阅检测、登录报错)
 # ==========================================================
+DOMAIN,oauthaccountmanager.googleapis.com    # <--- 已补上，Android/IDE 授权核心
+DOMAIN,oauth2.googleapis.com                 # <--- 已补上，令牌分发核心
 DOMAIN,accounts.google.com
 DOMAIN,myaccount.google.com
-DOMAIN,oauth2.googleapis.com
-DOMAIN,oauthaccountmanager.googleapis.com
 DOMAIN,subscriptionsfirstparty-pa.googleapis.com
 DOMAIN,notifications-pa.googleapis.com
 DOMAIN,location.googleapis.com
@@ -68,7 +68,6 @@ DOMAIN-SUFFIX,apis.google.com
 # 7. [精准兜底] (防止未来域名变动，但不使用宽泛关键字以防冲突)
 # ==========================================================
 DOMAIN-KEYWORD,googleusercontent
-# 备注：已删除 DOMAIN-KEYWORD,googleapis 以防干扰 YouTube 视频流
 
 
 
