@@ -1,58 +1,56 @@
 # ==========================================================
-# 1. [Gemini 核心通讯网关] (决定对话是否能成功发送与实时回复)
+# 1. [Gemini Web网页与主域名] (网页版主入口及 UI 交互)
 # ==========================================================
-DOMAIN,robinfrontend-pa.googleapis.com
-DOMAIN,www.googleapis.com
-DOMAIN,aida.googleapis.com
-DOMAIN,alkalicontent-pa.googleapis.com
-DOMAIN,content-push.googleapis.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,gemini.usercontent.goog  # Artifacts 代码渲染/动态预览专属域名
+DOMAIN,ai.google.dev                   # 开发者主页
+DOMAIN,aistudio.google.com             # AI Studio 控制台主页
+DOMAIN,deepmind.google                 # DeepMind 关联跳转与底层介绍
+DOMAIN,deepmind.com
 
 # ==========================================================
-# 2. [AI 生成引擎与 API] (Gemini API 调用、AI Studio、生成式语言模型)
+# 2. [Gemini 核心对话与生成 API] (精准提取，绝不影响 YouTube)
 # ==========================================================
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN,aistudio.google.com
-DOMAIN,makersuite.google.com
-DOMAIN,ai.google.dev
-DOMAIN,alkalimakersuite-pa.clients6.google.com
+# 网页版与客户端对话的核心网关
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,alkalimessages-pa.googleapis.com
+DOMAIN,alkalicontent-pa.googleapis.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,robinfrontend-pa.googleapis.com
+DOMAIN,aida.googleapis.com
+# AI Studio & API 调用的专用域名
 DOMAIN,alkalimakersuite-pa.googleapis.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX,generativeai.google
 
 # ==========================================================
-# 3. [多媒体与静态内容] (解决图片生成预览、上传分析、UI图标加载)
+# 3. [Gemini 移动端 App & Live 语音模式专用] (Android/iOS 客户端通讯)
 # ==========================================================
-DOMAIN-SUFFIX,googleusercontent.com  # 包含 lh3 等所有图片存储
-DOMAIN-SUFFIX,gemini.usercontent.goog # Artifacts 代码渲染/动态预览
-DOMAIN-SUFFIX,gstatic.com            # 核心静态资源库
-DOMAIN-SUFFIX,google-analytics.com    # 某些界面逻辑依赖分析脚本
+DOMAIN,assistant.google.com            # 移动端助手底层接管
+DOMAIN,speech-pa.googleapis.com        # Gemini Live 实时语音输入/输出
+DOMAIN,voicesearch-pa.googleapis.com   # 语音识别辅助
+DOMAIN,content-push.googleapis.com     # 移动端推送与长连接同步
 
 # ==========================================================
-# 4. [IDE & 开发者工具] (Android Studio / VS Code Gemini 插件)
+# 4. [IDE & 开发者工具端] (Android Studio / VS Code Gemini 插件)
 # ==========================================================
-DOMAIN,cloudaicontent-pa.googleapis.com
-DOMAIN,cloudaicompanion.googleapis.com
-DOMAIN,ide-ai.googleapis.com
-DOMAIN,firebase-settings.crashlytics.com
+DOMAIN,cloudaicontent-pa.googleapis.com   # 代码补全与上下文分析核心
+DOMAIN,cloudaicompanion.googleapis.com    # 侧边栏聊天核心
+DOMAIN,ide-ai.googleapis.com              # IDE 云端 AI 接口
+DOMAIN,idx.dev                            # Project IDX (深度集成 Gemini 的云 IDE)
+DOMAIN,firebase-settings.crashlytics.com  # 插件遥测与配置拉取
 
 # ==========================================================
-# 5. [鉴权与账号安全] (防止因 IP 漂移导致的登录掉线或地区限制)
+# 5. [鉴权、安全与多媒体] (这部分多为 Google 共用，但走 Gemini 节点最稳)
 # ==========================================================
+# 账号状态与地区检测 (防止登录时报 Region Not Supported)
 DOMAIN,accounts.google.com
-DOMAIN,oauth2.googleapis.com
 DOMAIN,myaccount.google.com
-DOMAIN,myactivity.google.com
-DOMAIN,location.googleapis.com       # 定位检测，防范 Region Not Supported
-DOMAIN,firebaseremoteconfig.googleapis.com
-DOMAIN,cloudconfig.googleapis.com
-DOMAIN-SUFFIX,apis.google.com
-
-# ==========================================================
-# 6. [终极兜底方案] (防止未来域名变动，建议开启关键字匹配)
-# ==========================================================
-DOMAIN-KEYWORD,googleapis
-DOMAIN-KEYWORD,googleusercontent
+DOMAIN,location.googleapis.com
+# 图片上传分析、历史对话记录头像、UI 静态文件
+DOMAIN-SUFFIX,googleusercontent.com       # 不用 Keyword，用 Suffix 限制范围
+DOMAIN-SUFFIX,gstatic.com
 
 
 ### OpenAI ###
