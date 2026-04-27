@@ -54,9 +54,7 @@ DOMAIN,pa-assistant-be-pa.googleapis.com
 # 6. [鉴权、订阅与账号安全] (核心！解决掉线、订阅检测、登录报错)
 # ==========================================================
 DOMAIN,oauthaccountmanager.googleapis.com   
-# <--- 已补上，Android/IDE 授权核心
 DOMAIN,oauth2.googleapis.com                
-# <--- 已补上，令牌分发核心
 DOMAIN,accounts.google.com
 DOMAIN,myaccount.google.com
 DOMAIN,subscriptionsfirstparty-pa.googleapis.com
