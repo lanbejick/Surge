@@ -40,7 +40,7 @@ DOMAIN,ide-ai.googleapis.com
 DOMAIN,idx.dev
 DOMAIN,firebase-settings.crashlytics.com
 DOMAIN,playdeveloperreporting.googleapis.com
-DOMAIN,cloudcode-pa.googleapis.com:443
+DOMAIN,cloudcode-pa.googleapis.com
 
 # ==========================================================
 # 5. [移动端 App 与 Gemini Live] (语音对话与 Android 助手集成)
