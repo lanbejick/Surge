@@ -118,9 +118,3 @@ IP-ASN,20473,no-resolve
 DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
-
-### Cursor  ###
-DOMAIN-SUFFIX,cursor.sh,DIRECT
-DOMAIN-SUFFIX,cursor.com,DIRECT
-DOMAIN-SUFFIX,cursor-cdn.com,DIRECT
-DOMAIN-SUFFIX,cursorapi.com,DIRECT
