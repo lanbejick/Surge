@@ -120,7 +120,7 @@ DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
 ### Cursor  ###
-DOMAIN-SUFFIX,cursor.sh
-DOMAIN-SUFFIX,cursor.com
-DOMAIN-SUFFIX,cursor-cdn.com
-DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursor.sh,DIRECT
+DOMAIN-SUFFIX,cursor.com,DIRECT
+DOMAIN-SUFFIX,cursor-cdn.com,DIRECT
+DOMAIN-SUFFIX,cursorapi.com,DIRECT
