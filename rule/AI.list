@@ -1,8 +1,7 @@
 # ==========================================================
-# 1. [Gemini 核心通讯网关] (网页与 App 基础对话通讯)
+# 1. [Gemini 核心通讯网关与高级模型]
 # ==========================================================
 DOMAIN,robinfrontend-pa.googleapis.com
-DOMAIN,www.googleapis.com
 DOMAIN,aida.googleapis.com
 DOMAIN,aicode.googleapis.com
 DOMAIN,alkalicontent-pa.googleapis.com
@@ -11,9 +10,11 @@ DOMAIN,proactivebackend-pa.googleapis.com
 DOMAIN,content-push.googleapis.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,deepmind.com
 
 # ==========================================================
-# 2. [AI 生成引擎与 API] (Gemini API、AI Studio 与生成式语言模型)
+# 2. [AI 生成引擎与 API] (Gemini API、AI Studio)
 # ==========================================================
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,generativeai.google
@@ -24,54 +25,40 @@ DOMAIN,alkalimakersuite-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.googleapis.com
 
 # ==========================================================
-# 3. [多媒体、预览与静态内容] (UI 加载、图片分析、Artifacts 渲染)
+# 3. [多媒体、预览与静态内容] (仅限 Gemini 专属)
 # ==========================================================
-DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,gemini.usercontent.goog
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN,www.gstatic.com
-DOMAIN-SUFFIX,google-analytics.com
 
 # ==========================================================
-# 4. [IDE & 开发者工具专用] (Android Studio / VS Code Gemini 插件)
+# 4. [IDE & 开发者工具专用]
 # ==========================================================
 DOMAIN,cloudaicontent-pa.googleapis.com
 DOMAIN,cloudaicompanion.googleapis.com
 DOMAIN,ide-ai.googleapis.com
 DOMAIN,idx.dev
-DOMAIN,firebase-settings.crashlytics.com
-DOMAIN,playdeveloperreporting.googleapis.com
 DOMAIN,cloudcode-pa.googleapis.com
-DOMAIN,testing.googleapis.com
 
 # ==========================================================
-# 5. [移动端 App 与 Gemini Live] (语音对话与 Android 助手集成)
+# 5. [移动端 App 与 Gemini Live]
 # ==========================================================
-DOMAIN,assistant.google.com
 DOMAIN,speech-pa.googleapis.com
 DOMAIN,voicesearch-pa.googleapis.com
 DOMAIN,pa-assistant-be-pa.googleapis.com
+# 注意：如果你不希望手机 Google Assistant 全局走此节点，可酌情删除下一行
+DOMAIN,assistant.google.com
 
 # ==========================================================
-# 6. [鉴权、订阅与账号安全] (核心！解决掉线、订阅检测、登录报错)
+# 6. [鉴权与订阅安全] (保留确有必要的接口)
 # ==========================================================
-DOMAIN,oauthaccountmanager.googleapis.com   
-DOMAIN,oauth2.googleapis.com                
-DOMAIN,accounts.google.com
-DOMAIN,myaccount.google.com
+DOMAIN,oauthaccountmanager.googleapis.com
+DOMAIN-SUFFIX,oauth2.googleapis.com
 DOMAIN,subscriptionsfirstparty-pa.googleapis.com
-DOMAIN,notifications-pa.googleapis.com
-DOMAIN,location.googleapis.com
-DOMAIN,myactivity.google.com
-DOMAIN,firebaseremoteconfig.googleapis.com
-DOMAIN,cloudconfig.googleapis.com
 DOMAIN,identitytoolkit.googleapis.com
-DOMAIN-SUFFIX,apis.google.com
 
 # ==========================================================
-# 7. [精准兜底] (防止未来域名变动，但不使用宽泛关键字以防冲突)
+# 7. [第三方客户端与精准兜底]
 # ==========================================================
-DOMAIN-KEYWORD,googleusercontent
+DOMAIN-KEYWORD,antigravity
 
 
 
